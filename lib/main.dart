@@ -59,10 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             StreamBuilder<int>(
+              initialData: _counter,
               stream: _streamController.stream,
               builder: (context, snapshot) {
                 return Text(
-                  '${snapshot.data ?? 0}', // or '$_counter',
+                  '${snapshot.data}', // or '$_counter',
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
