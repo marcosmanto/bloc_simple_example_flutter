@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               stream: _streamController.stream,
               builder: (context, snapshot) {
                 return Text(
-                  '$_counter',
+                  '${snapshot.data ?? 0}', // or '$_counter',
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
